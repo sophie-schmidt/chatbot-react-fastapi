@@ -15,7 +15,6 @@ async function getConversation$(): Promise<Conversation | null> {
 
 /* Posts a question to the agent and retrieves the response */ 
 async function postQuestionToAgent$(question: string): Promise<string | null> {
-    // Implementation for posting question to agent can be added here
     return sendMessageToAgent(question);
 }
 

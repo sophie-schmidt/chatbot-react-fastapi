@@ -18,7 +18,7 @@ export function Main({initialConversation}: {initialConversation:Conversation | 
     const [conversation, setConversation] = useState(initialConversation);
     const [waitForAgent, setWaitForAgent] = useState(false);
 
-    const refresh = async (userInput: string) => {
+    const updateConversation = async (userInput: string) => {
         setWaitForAgent(true);
 
         // Add user message to conversation with timestamp
@@ -47,7 +47,7 @@ export function Main({initialConversation}: {initialConversation:Conversation | 
             </div>  
 
              <div className="bg-gray-100 fixed bottom-0 w-full pl-4">
-                <InputToAgent onAction={refresh} disabled={waitForAgent} />
+                <InputToAgent onAction={updateConversation} disabled={waitForAgent} />
             </div> 
 
         </div>
