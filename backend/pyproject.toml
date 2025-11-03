@@ -1,0 +1,40 @@
+[project]
+name = "my-fastapi-app"
+version = "0.1.0"
+description = "FastAPI backend for Next.js frontend"
+authors = [{ name = "Sophie" }]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "httpx",
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --cov=backend"
+testpaths = ["backend/tests"]
+markers = [
+    "integration: marks integration tests",
+    "slow: marks slow tests",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["backend"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+[tool.mypy]
+files = "backend"
+strict = true
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"

@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "changelog": "generate-changelog"
+  },
+  "devDependencies": {
+    "generate-changelog": "^1.8.0"
+  }
+}
