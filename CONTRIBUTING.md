@@ -16,12 +16,14 @@ Thank you for your interest in contributing to this project! This document provi
 See the README.md for detailed setup instructions for both frontend and backend.
 
 ### Backend (FastAPI)
+
 - Python 3.10+
 - Virtual environment (venv/conda)
 - Install dependencies: `pip install -r requirements.txt`
 - Run tests: `pytest`
 
 ### Frontend (Next.js)
+
 - Node.js 16+
 - Install dependencies: `npm install`
 - Run development server: `npm run dev`
