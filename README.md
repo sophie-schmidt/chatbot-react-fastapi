@@ -46,8 +46,6 @@ The API will be available at: `http://localhost:8000` and the API root prefix is
 ```powershell
 cd frontend/app-chat
 npm install
-# set an env var for local dev (PowerShell)
-$env:NEXT_PUBLIC_API_URL = 'http://localhost:8000/api/v1'
 npm run dev
 ```
 
