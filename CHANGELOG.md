@@ -10,7 +10,7 @@
 
 ##### Bug Fixes
 
-*  Add frontend/app-chat files properly (no longer as submodule) (9f5bd3db)
+*  Add frontend files properly (no longer as submodule) (9f5bd3db)
 
 ##### Other Changes
 

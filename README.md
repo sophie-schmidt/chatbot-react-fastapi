@@ -9,7 +9,7 @@ A small full-stack chat demo combining a Next.js (App Router) frontend and a Fas
   - `crud/`, `schemas/`, `routers/` — app modules
   - Run with `uvicorn main:app --reload --port 8000` from the `backend` folder
 
-- `frontend/app-chat/` — Next.js (App Router) frontend
+- `frontend/` — Next.js (App Router) frontend
   - `app/` — Next.js app files (layouts, pages, components)
   - `public/` — static assets
   - `next.config.ts`, `package.json`, `tsconfig.json`
@@ -44,7 +44,7 @@ The API will be available at: `http://localhost:8000` and the API root prefix is
 2) Frontend (Next.js)
 
 ```powershell
-cd frontend/app-chat
+cd frontend
 npm install
 npm run dev
 ```
@@ -81,25 +81,25 @@ git restore --staged path\to\file
 
 ## Deployment notes
 
-- Build the frontend for production with `npm run build` from `frontend/app-chat` and deploy to Vercel, Netlify, or another static host that supports Next.js.
+- Build the frontend for production with `npm run build` from `frontend` and deploy to Vercel, Netlify, or another static host that supports Next.js.
 - The backend can be containerized or deployed to any Python host supporting ASGI (e.g., Uvicorn + Gunicorn behind nginx, or as an app on a cloud provider).
 
 ## Troubleshooting
 
 - If the frontend shows an error about an async Client Component (e.g. "<ChatWindow> is an async Client Component"), check that any component with `"use client"` is not declared `async` and that data fetching happens in client-safe lifecycle hooks (e.g., `useEffect`) or by converting the component to a Server Component (remove `"use client"`).
 
-- If you run into Git submodule/subtree issues with `frontend/app-chat` appearing as a submodule, remove the cached submodule and re-add the files (already handled in this repo):
+- If you run into Git submodule/subtree issues with `frontend` appearing as a submodule, remove the cached submodule and re-add the files (already handled in this repo):
 
 ```powershell
-git rm --cached frontend/app-chat
-git add frontend/app-chat
+git rm --cached frontend
+git add frontend
 git commit -m "Add frontend files"
 git push
 ```
 
 ## Useful files
 
-- `frontend/app-chat/app/api/apiConfig.ts` — frontend API URL configuration (reads `NEXT_PUBLIC_API_URL`)
+- `frontend/app/api/apiConfig.ts` — frontend API URL configuration (reads `NEXT_PUBLIC_API_URL`)
 - `backend/main.py` — FastAPI app entry
 
 ## Contact / Author
